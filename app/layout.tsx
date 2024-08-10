@@ -2,6 +2,7 @@ import { cn } from '@/lib/utils';
 import { author as fontSans } from '@/styles/fonts';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
+import Providers from './providers';
 
 export const metadata: Metadata = {
   title: 'NextJs SaaS Starter Kit',
@@ -19,7 +20,7 @@ export default function RootLayout({
       <body
         className={cn('min-h-screen font-sans antialiased', fontSans.variable)}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

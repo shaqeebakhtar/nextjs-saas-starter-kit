@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: projectdb
+    image: postgres:15
+    volumes:
+      - projectdata:/var/lib/postgresql/data
+    ports:
+      - '5500:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: project
+      POSTGRES_PASSWORD: password
+
+volumes:
+  projectdata:
