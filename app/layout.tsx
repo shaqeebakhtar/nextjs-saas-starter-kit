@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { author as fontSans } from '@/styles/fonts';
+import { sora as fontTitle, workSans as fontBody } from '@/styles/fonts';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import Providers from './providers';
@@ -18,7 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn('min-h-screen font-sans antialiased', fontSans.variable)}
+        className={cn(
+          'min-h-screen font-body antialiased',
+          fontTitle.variable,
+          fontBody.variable
+        )}
       >
         <Providers>{children}</Providers>
       </body>
