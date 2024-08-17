@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
+import OAuthLogins from '../_components/oauth-logins';
 
 export const metadata: Metadata = {
   title: 'Create an account | Acme Inc',
@@ -21,16 +22,7 @@ const Register = () => {
             Reprehenderit sapiente.
           </p>
         </div>
-        <div className="w-full flex flex-col gap-3">
-          <Button>
-            <Icons.google className="w-4 h-4 mr-2" />
-            Continue with Google
-          </Button>
-          <Button variant={'outline'}>
-            <Icons.gitHub className="w-4 h-4 mr-2" />
-            Continue with GitHub
-          </Button>
-        </div>
+        <OAuthLogins />
         <p className="text-sm text-center text-muted-foreground">
           Already have an account?{' '}
           <Link

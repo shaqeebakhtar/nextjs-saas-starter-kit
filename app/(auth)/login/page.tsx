@@ -5,6 +5,7 @@ import { MailIcon } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import React from 'react';
+import OAuthLogins from '../_components/oauth-logins';
 
 export const metadata: Metadata = {
   title: 'Sign in | Acme Inc',
@@ -23,13 +24,13 @@ const Login = () => {
             Reprehenderit sapiente.
           </p>
         </div>
-        <div className="flex flex-col gap-3">
-          <Input type="email" placeholder="example@domain.co" />
-          <Button>
+        <form className="flex flex-col gap-3">
+          <Input type="email" placeholder="example@domain.co" required />
+          <Button type="submit">
             <MailIcon className="w-4 h-4 mr-2" />
             Continue with Email
           </Button>
-        </div>
+        </form>
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
             <span className="w-3/4 border-t mx-auto" />
@@ -38,16 +39,7 @@ const Login = () => {
             <span className="bg-background px-2 text-muted-foreground">Or</span>
           </div>
         </div>
-        <div className="flex flex-col gap-3">
-          <Button variant={'outline'}>
-            <Icons.google className="w-4 h-4 mr-2" />
-            Continue with Google
-          </Button>
-          <Button variant={'outline'}>
-            <Icons.gitHub className="w-4 h-4 mr-2" />
-            Continue with GitHub
-          </Button>
-        </div>
+        <OAuthLogins googleVariant={'outline'} />
         <p className="text-sm text-center text-muted-foreground">
           Don&apos;t have an account?{' '}
           <Link
