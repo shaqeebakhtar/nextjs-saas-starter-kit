@@ -1,6 +1,5 @@
 import { Icons } from '@/components/icons';
 import { Button } from '@/components/ui/button';
-import React from 'react';
 
 type OAuthLoginsProps = {
   googleVariant?:

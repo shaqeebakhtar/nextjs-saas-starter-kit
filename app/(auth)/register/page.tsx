@@ -1,8 +1,5 @@
-import { Icons } from '@/components/icons';
-import { Button } from '@/components/ui/button';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import React from 'react';
 import OAuthLogins from '../_components/oauth-logins';
 
 export const metadata: Metadata = {

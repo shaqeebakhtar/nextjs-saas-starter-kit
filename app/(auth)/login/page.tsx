@@ -1,10 +1,8 @@
-import { Icons } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { MailIcon } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import React from 'react';
 import OAuthLogins from '../_components/oauth-logins';
 
 export const metadata: Metadata = {

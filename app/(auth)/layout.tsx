@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import React from 'react';
 import { FrameIcon } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
 
 const AuthLayout = ({
   children,
@@ -15,9 +15,9 @@ const AuthLayout = ({
           <FrameIcon className="w-5 h-5 text-primary" />
           Acme Inc
         </div>
-        <div className="h-full flex items-center justify-between">
+        <main className="h-full flex items-center justify-between">
           {children}
-        </div>
+        </main>
         <div className="flex flex-col sm:flex-row gap-2 items-center justify-between">
           <p className="text-xs text-muted-foreground">© 2024 Acme Inc</p>
           <div className="flex items-center gap-3 text-muted-foreground text-xs divide-x">
@@ -38,7 +38,7 @@ const AuthLayout = ({
           </div>
         </div>
       </div>
-      <div className="hidden sm:block sm:col-span-2 overflow-hidden m-4 ml-0 bg-gray-200 rounded-lg">
+      <aside className="hidden sm:block sm:col-span-2 overflow-hidden m-4 ml-0 bg-gray-200 rounded-lg">
         <Image
           alt="App UI"
           draggable="false"
@@ -47,7 +47,7 @@ const AuthLayout = ({
           src="/placeholder.svg"
           width="100"
         />
-      </div>
+      </aside>
     </div>
   );
 };
