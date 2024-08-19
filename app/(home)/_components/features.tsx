@@ -3,10 +3,10 @@ import Image from 'next/image';
 const Features = () => {
   return (
     <section className="max-w-screen-xl w-full mx-auto py-10 px-3 lg:py-16 lg:px-16">
-      <h2 className="text-center text-3xl md:text-5xl font-bold font-title">
+      <h2 className="text-center text-3xl md:text-5xl font-bold font-title max-w-[820px] mx-auto leading-[1.15] md:leading-[1.15]">
         Everything you need in one place
       </h2>
-      <p className="text-lg leading-6 text-center text-muted-foreground mx-auto max-w-2xl mt-4">
+      <p className="md:text-lg leading-6 text-center text-muted-foreground mx-auto max-w-[680px] mt-4">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo iusto eos
         perferendis, nam maxime eum molestiae sint quod veritatis hic.
       </p>
@@ -39,7 +39,7 @@ const Features = () => {
             <Image
               alt="Feature Image"
               draggable="false"
-              className="w-full object-cover bg-center rounded-sm aspect-[3/2.05]"
+              className="w-full object-cover bg-center rounded-sm aspect-video md:aspect-[3/2.05]"
               height="100"
               src="/placeholder.svg"
               width="100"
@@ -61,7 +61,7 @@ const Features = () => {
             <Image
               alt="Feature Image"
               draggable="false"
-              className="w-full object-cover bg-center rounded-sm aspect-[3/2.05]"
+              className="w-full object-cover bg-center rounded-sm aspect-video md:aspect-[3/2.05]"
               height="100"
               src="/placeholder.svg"
               width="100"

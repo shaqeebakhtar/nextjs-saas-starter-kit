@@ -7,12 +7,12 @@ const Hero = () => {
   return (
     <section className="max-w-screen-xl w-full mx-auto py-10 px-3 lg:py-20 lg:px-16">
       <h1 className="text-center font-title font-bold text-4xl leading-[1.15] md:text-6xl md:leading-[1.15]">
-        Heading for the landing page of a{' '}
-        <span className="bg-gradient-to-r from-violet-700 via-fuchsia-600 to-blue-600 bg-clip-text text-transparent">
+        Accelerate Development with the
+        <span className="bg-gradient-to-r from-violet-700 via-fuchsia-600 to-blue-600 bg-clip-text text-transparent block">
           Nextjs Starter kit
         </span>
       </h1>
-      <p className="text-center text-xl text-muted-foreground mx-auto max-w-2xl mt-4">
+      <p className="text-center text-xl text-muted-foreground mx-auto max-w-[680px] mt-4">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo iusto eos
         perferendis, nam maxime eum molestiae sint quod veritatis hic.
       </p>
