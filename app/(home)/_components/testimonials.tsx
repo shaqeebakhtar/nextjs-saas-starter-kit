@@ -8,7 +8,7 @@ const Testimonials = () => {
       <h2 className="text-center text-3xl md:text-5xl font-bold font-title max-w-[820px] mx-auto leading-[1.15] md:leading-[1.15]">
         Public Cheers for Us!
       </h2>
-      <p className="md:text-lg leading-6 text-center text-muted-foreground mx-auto max-w-[680px] mt-4">
+      <p className="md:text-lg md:leading-6 text-center text-muted-foreground mx-auto max-w-[680px] mt-4">
         Over 1000+ people trust us
       </p>
       <div className="space-y-4 sm:columns-2 sm:gap-4 lg:columns-3 mt-10">

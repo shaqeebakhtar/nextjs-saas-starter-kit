@@ -6,7 +6,7 @@ const Features = () => {
       <h2 className="text-center text-3xl md:text-5xl font-bold font-title max-w-[820px] mx-auto leading-[1.15] md:leading-[1.15]">
         Everything you need in one place
       </h2>
-      <p className="md:text-lg leading-6 text-center text-muted-foreground mx-auto max-w-[680px] mt-4">
+      <p className="md:text-lg md:leading-6 text-center text-muted-foreground mx-auto max-w-[680px] mt-4">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo iusto eos
         perferendis, nam maxime eum molestiae sint quod veritatis hic.
       </p>

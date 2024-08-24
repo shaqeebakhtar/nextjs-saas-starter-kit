@@ -111,7 +111,7 @@ const Pricing = () => {
       <h2 className="text-center text-3xl md:text-5xl font-bold font-title max-w-[820px] mx-auto leading-[1.15] md:leading-[1.15]">
         Simple and transparent, Plans and Pricing
       </h2>
-      <p className="md:text-lg leading-6 text-center text-muted-foreground mx-auto max-w-[680px] mt-4">
+      <p className="md:text-lg md:leading-6 text-center text-muted-foreground mx-auto max-w-[680px] mt-4">
         Start for free, no credit card needed and pay as you grow.
       </p>
       <div className="mt-10 flex justify-center">
