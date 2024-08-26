@@ -12,7 +12,7 @@ const Faqs = () => {
         <h2 className="text-center lg:text-left text-3xl md:text-5xl font-bold font-title max-w-[820px] leading-[1.15] md:leading-[1.15]">
           Frequently asked questions
         </h2>
-        <p className="md:text-lg md:leading-6 text-center lg:text-left text-muted-foreground mx-auto max-w-[680px] mt-4">
+        <p className="md:text-lg md:leading-6 text-center lg:text-left text-muted-foreground max-w-[540px] mt-4">
           Stuck on something? We&apos;re here to help with all your questions
           and answer in one place.
         </p>

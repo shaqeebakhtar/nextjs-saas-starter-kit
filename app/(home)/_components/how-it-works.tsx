@@ -10,7 +10,7 @@ const HowItWorks = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi incidunt
         consectetur architecto ipsum quos ipsa aperiam provident vel et minima!
       </p>
-      <div className="mt-10 grid grid-cols-3 gap-3">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         <Step />
         <Step />
         <Step />
@@ -33,7 +33,7 @@ const Step = () => {
       <div className="inline-flex items-center justify-center rounded-full p-1.5 w-8 h-8 ring-1 ring-inset ring-gray-800/10">
         <CircleIcon className="text-violet-700 w-4 h-4" strokeWidth={1.75} />
       </div>
-      <p className="font-medium text-lg mt-3">How it works</p>
+      <h3 className="font-medium text-lg mt-3">How it works</h3>
       <p className="text-muted-foreground text-sm mt-3">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium
         doloribus magni quibusdam deleniti!
