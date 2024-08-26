@@ -10,7 +10,7 @@ const TrustedBy = () => {
             src="./logoipsum.svg"
             height={140}
             width={28}
-            className="w-full object-cover"
+            className="w-full max-w-[140px] object-cover"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -19,7 +19,7 @@ const TrustedBy = () => {
             src="./logoipsum.svg"
             height={140}
             width={28}
-            className="w-full object-cover"
+            className="w-full max-w-[140px] object-cover"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -28,7 +28,7 @@ const TrustedBy = () => {
             src="./logoipsum.svg"
             height={140}
             width={28}
-            className="w-full object-cover"
+            className="w-full max-w-[140px] object-cover"
           />
         </div>
         <div className="flex items-center justify-center">
@@ -37,7 +37,7 @@ const TrustedBy = () => {
             src="./logoipsum.svg"
             height={140}
             width={28}
-            className="w-full object-cover"
+            className="w-full max-w-[140px] object-cover"
           />
         </div>
         <div className="col-span-2 md:col-span-1 flex items-center justify-center">
@@ -46,7 +46,7 @@ const TrustedBy = () => {
             src="./logoipsum.svg"
             height={140}
             width={28}
-            className="w-full object-cover"
+            className="w-full max-w-[140px] object-cover"
           />
         </div>
       </div>
