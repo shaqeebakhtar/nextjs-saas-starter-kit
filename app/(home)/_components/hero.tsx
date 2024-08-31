@@ -7,8 +7,8 @@ const Hero = () => {
   return (
     <section className="max-w-screen-xl w-full mx-auto py-10 px-3 lg:py-20 lg:px-16">
       <h1 className="text-center font-title font-bold text-4xl leading-[1.15] md:text-6xl md:leading-[1.15]">
-        Accelerate Development with the
-        <span className="bg-gradient-to-r from-violet-700 via-fuchsia-600 to-blue-600 bg-clip-text text-transparent block">
+        Accelerate Development with the{' '}
+        <span className="bg-gradient-to-r from-violet-700 via-fuchsia-600 to-blue-600 bg-clip-text text-transparent">
           Nextjs Starter kit
         </span>
       </h1>
