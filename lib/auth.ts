@@ -1,6 +1,7 @@
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import NextAuth, { type DefaultSession } from 'next-auth';
 import Google from 'next-auth/providers/google';
+import GitHub from 'next-auth/providers/github';
 import Resend from 'next-auth/providers/resend';
 import { db } from './db';
 
@@ -16,20 +17,26 @@ const {
   AUTH_RESEND_KEY,
   NEXTAUTH_SECRET,
   ENVIRONMENT,
-  AUTH_CLIENT_ID,
-  AUTH_CLIENT_SECRET,
+  AUTH_GOOGLE_ID,
+  AUTH_GOOGLE_SECRET,
+  AUTH_GITHUB_ID,
+  AUTH_GITHUB_SECRET,
 } = process.env;
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(db),
   providers: [
     Google({
-      clientId: AUTH_CLIENT_ID as string,
-      clientSecret: AUTH_CLIENT_SECRET as string,
+      clientId: AUTH_GOOGLE_ID as string,
+      clientSecret: AUTH_GOOGLE_SECRET as string,
+    }),
+    GitHub({
+      clientId: AUTH_GITHUB_ID as string,
+      clientSecret: AUTH_GITHUB_SECRET as string,
     }),
     Resend({
       apiKey: AUTH_RESEND_KEY,
-      from: 'no-reply@company.com',
+      from: 'shaqeebakhtar01@gmail.com',
     }),
   ],
   pages: {
@@ -39,10 +46,19 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   session: {
     strategy: 'jwt',
   },
+  events: {
+    async linkAccount({ user }) {
+      await db.user.update({
+        where: { id: user.id },
+        data: { emailVerified: new Date() },
+      });
+    },
+  },
   callbacks: {
     jwt: async ({ token }) => {
-      // const user = await getUserByEmail(token?.email as string);
-      const user = { id: 1, name: 'sa' };
+      const user = await db.user.findUnique({
+        where: { email: token?.email as string },
+      });
 
       if (user) {
         token.id = user.id;
