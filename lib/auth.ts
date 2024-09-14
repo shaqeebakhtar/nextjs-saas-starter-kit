@@ -1,7 +1,7 @@
 import { PrismaAdapter } from '@auth/prisma-adapter';
 import NextAuth, { type DefaultSession } from 'next-auth';
-import Google from 'next-auth/providers/google';
 import GitHub from 'next-auth/providers/github';
+import Google from 'next-auth/providers/google';
 import Resend from 'next-auth/providers/resend';
 import { db } from './db';
 
@@ -14,13 +14,13 @@ declare module 'next-auth' {
 }
 
 const {
-  AUTH_RESEND_KEY,
   NEXTAUTH_SECRET,
   ENVIRONMENT,
   AUTH_GOOGLE_ID,
   AUTH_GOOGLE_SECRET,
   AUTH_GITHUB_ID,
   AUTH_GITHUB_SECRET,
+  EMAIL_FROM,
 } = process.env;
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -35,8 +35,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       clientSecret: AUTH_GITHUB_SECRET as string,
     }),
     Resend({
-      apiKey: AUTH_RESEND_KEY,
-      from: 'shaqeebakhtar01@gmail.com',
+      from: EMAIL_FROM,
     }),
   ],
   pages: {

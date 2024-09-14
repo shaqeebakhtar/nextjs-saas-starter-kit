@@ -3,6 +3,7 @@ import { sora as fontTitle, workSans as fontBody } from '@/styles/fonts';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import Providers from './providers';
+import { Toaster } from '@/components/ui/sonner';
 
 export const metadata: Metadata = {
   title: 'NextJs SaaS Starter Kit',
@@ -25,6 +26,7 @@ export default function RootLayout({
         )}
       >
         <Providers>{children}</Providers>
+        <Toaster closeButton />
       </body>
     </html>
   );

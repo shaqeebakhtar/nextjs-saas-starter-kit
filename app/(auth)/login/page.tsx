@@ -1,8 +1,6 @@
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { MailIcon } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import EmailLogin from '../_components/email-login';
 import OAuthLogins from '../_components/oauth-logins';
 
 export const metadata: Metadata = {
@@ -22,13 +20,7 @@ const Login = () => {
             Reprehenderit sapiente.
           </p>
         </div>
-        <form className="flex flex-col gap-3">
-          <Input type="email" placeholder="example@domain.co" required />
-          <Button type="submit">
-            <MailIcon className="w-4 h-4 mr-2" />
-            Continue with Email
-          </Button>
-        </form>
+        <EmailLogin />
         <div className="relative">
           <div className="absolute inset-0 flex items-center">
             <span className="w-3/4 border-t mx-auto" />
